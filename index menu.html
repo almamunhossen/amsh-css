@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+
+
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+        nav ul{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            list-style: none;
+            justify-content:center ;
+            position: relative;
+        }
+
+        nav{
+            background-color: darkcyan;
+    
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+            display: inline-block;
+            padding: 1rem 1.25rem;
+            
+        }
+
+        a:hover{
+            background-color: rgb(17, 59, 59);
+            width: 100%;
+        }
+        ul .dopwonwMenu{
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top:100%;
+            display: none;
+        }
+        nav li:hover ul.dopwonwMenu{
+            display: block;
+            background-color: darkcyan;
+        }
+ 
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Abour</a></li>
+            <li><a href="#">Servics</a>
+                <ul class="dopwonwMenu">
+                    <li><a href="#">GRAPHIC DESIGN</a></li>
+                    <li><a href="#">WEB DEVELOPMENT</a></li>
+                    <li><a href="#">Digital Marketing</a></li>
+                </ul>
+            </li>   
+            <li><a href="#">Works</a></li>
+            <li><a href="#">Coutact</a></li>
+        </ul>
+    </nav>
+    
+</body>
+</html>

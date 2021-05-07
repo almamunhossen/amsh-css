@@ -1,0 +1,286 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*---main Menu--*/
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  position: relative;
+}
+
+nav {
+  background-color: darkcyan;
+  display: fixed;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 1rem 1.25rem;
+}
+
+nav ul li a:hover {
+  width: 100%;
+  background-color: rgb(17, 59, 59);
+}
+ul .dopwonwMenu {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  display: none;
+}
+nav li:hover ul.dopwonwMenu {
+  display: block;
+  background-color: darkcyan;
+}
+
+#heroSecton {
+  height: 100vh;
+  width: 100%;
+  background-color: #114747;
+  text-align: center;
+  color: #fff;
+  line-height: 2.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#heroSecton h1 {
+  font-size: 2.3rem;
+}
+
+/*----Secton Abour-----*/
+#sectonAbout {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  margin: 5%;
+}
+
+#sectonAbout img {
+  width: 70%;
+  border-radius: 5%;
+}
+.about {
+  width: 50%;
+}
+
+progress[value] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 90%;
+  height: 1rem;
+  margin: 0.6rem;
+}
+progress::-webkit-progress-value {
+  background-color: #039494;
+  height: 100%;
+  width: 50%;
+  box-sizing: border-box;
+  -webkit-user-modify: read-only !important;
+  border-radius: 5px;
+}
+progress::-webkit-progress-bar {
+  background-color: #e2e1e1;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-user-modify: read-only !important;
+  border-radius: 5px;
+}
+
+/*Section 2 */
+
+.sectonBakgroun {
+  background-color: #f8f8f8;
+}
+#sectonGrat {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5%;
+  width: 80%;
+  margin: auto;
+  padding: 3%;
+}
+article {
+  text-align: center;
+  line-height: 1.5rem;
+}
+article h4 {
+  text-transform: uppercase;
+  line-height: 2rem;
+}
+article p {
+  color: #8888889d;
+}
+
+button {
+  background-color: #039494;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.54rem;
+  color: #fff;
+  margin-top: 3%;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+button:hover {
+  background-color: #114747;
+}
+.fas {
+  font-size: 2.5rem;
+  background-color: #f2f2f2;
+  color: #039494;
+  padding: 5%;
+  border-radius: 50%;
+  margin-bottom: 5%;
+}
+.sectionHead {
+  text-align: center;
+  margin: 5%;
+}
+.sectionHead hr {
+  width: 15%;
+  margin: 1% auto;
+}
+.sectionHead h1 {
+  padding: 1%;
+  font-size: 1.6rem;
+}
+
+/*My Worsks sectont*/
+
+.myWorsk img {
+  width: 18.75rem;
+  height: 12.5rem;
+}
+.myWorsk {
+  position: relative;
+  width: 18.75rem;
+  height: 12.5rem;
+}
+.myWorsk:hover .overlay {
+  opacity: 0.5;
+  z-index: 5;
+}
+.sectonWorksSiz {
+  width: 90%;
+  margin: auto;
+}
+#sectonWorks {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 0.8rem;
+}
+
+/*---Work secton Text & Color Overlay---*/
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #008cba;
+}
+
+.overlayText {
+  color: white;
+  font-size: 1.25rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/*Footer Sectont*/
+
+footer {
+  background-color: #114747;
+  color: #fff;
+  height: 10%;
+  text-align: center;
+  padding: 3%;
+  margin-top: 5%;
+}
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+footer a:hover {
+  text-decoration: underline;
+  color: rgb(170, 165, 165);
+}
+
+/*--Responsive Web Design---*/
+@media only screen and (max-width: 50em) {
+  #sectonWorks {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
+
+  #sectonAbout img {
+    width: 100%;
+    border-radius: 2%;
+  }
+  .about {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 37.5rem) {
+  #sectonGrat {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  #sectonWorks {
+    display: grid;
+    grid-template-columns: auto;
+    grid-column: auto;
+    /* grid-gap: 2rem; */
+  }
+  .sectionHead {
+    margin-top: 20%;
+  }
+  /* body {
+    align-items: center;
+    margin: auto;
+  } */
+  nav ul li a {
+    padding: 0.8rem 0.4rem;
+    margin: auto 10%;
+    font-size: 1rem;
+  }
+
+  #sectonAbout {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin: 5%;
+  }
+
+  #sectonAbout img {
+    width: 100%;
+    border-radius: 2%;
+  }
+  .about {
+    width: 100%;
+  }
+}
